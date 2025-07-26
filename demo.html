@@ -1,0 +1,966 @@
+<body style="background-color: rgb(242, 45, 64); cursor: default;">
+    <!-- 移动端警告 -->
+    <div class="mobile-warning">
+        <div class="mobile-warning-text">
+            This webpage is better accessed through a computer browser.
+        </div>
+    </div>
+
+    <!-- 加载动画 -->
+    <div id="loading-overlay" class="loading-overlay fade-out" style="display: none;">
+        <div class="loading-container">
+            <svg width="100%" height="100%" viewBox="0 0 620 420" preserveAspectRatio="xMidYMid meet" overflow="visible" id="loading-svg-logo">
+            <path id="loading-half-circle" d="M75.6 120 C33.84 120 0 153.57 0 195 C0 236.42 33.84 270 75.6 270 L75.6 120 Z" fill="#F00000" fill-opacity="1.000000" fill-rule="evenodd"></path>
+            <path id="loading-rect1" d="M100 0 L115 0 C134.33 0 150 15.67 150 35 L150 270 L100 270 L100 0 Z" fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"></path>
+            <path id="loading-rect2" d="M169.5 124 L184.5 124 C203.83 124 219.5 139.67 219.5 159 L219.5 270 L169.5 270 L169.5 124 Z" fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"></path>
+            <path id="loading-rect3" d="M239.5 128 L254.5 128 C273.82 128 289.5 143.67 289.5 163 L289.5 274 L239.5 274 L239.5 128 Z" fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"></path>
+            <path id="loading-rect4" d="M309.5 128 L324.5 128 C343.83 128 359.5 143.67 359.5 163 L359.5 274 L309.5 274 L309.5 128 Z" fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"></path>
+            <path id="loading-rect5" d="M380 128 L395 128 C414.33 128 430 143.67 430 163 L430 274 L380 274 L380 128 Z" fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"></path>
+            <path id="loading-rect6" d="M450 129 L465 129 C484.33 129 500 144.67 500 164 L500 275 L485 275 C465.67 275 450 259.32 450 240 L450 129 Z" fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"></path>
+            <path id="loading-rect7" d="M520 129 L535 129 C554.33 129 570 144.67 570 164 L570 384 C570 403.33 554.33 419 535 419 L520 419 L520 129 Z" fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"></path>
+            <circle id="loading-circle" cx="605" cy="259" r="15" fill="#F00000" fill-opacity="1.000000"></circle>
+        </svg>
+            <div class="loading-percentage">100%</div>
+        </div>
+    </div>
+
+    <!-- 主内容 -->
+    <div id="main-content" style="display: block;" class="show">
+        <!-- 固定顶部导航 -->
+        <div class="topbar-initial-fixed" id="topbar-initial-fixed" style="display: block;">
+            <div class="position-button-group-fixed">
+                <div class="about top-text-button text-button">WHOAMI</div>
+                <div class="slash1"></div>
+                <div class="work top-text-button text-button">WORK</div>
+                <div class="slash2"></div>
+                <div class="contact top-text-button text-button">CONTACT</div>
+            </div>
+            <div class="thin-horizontal-bar-fixed"></div>
+            <div id="github" style="opacity: 1;">
+                <a href="https://github.com/OhMyKing" target="_blank">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <title>GitHub</title>
+                        <path d="M12 0C5.37 0 0 5.5 0 12.3C0 17.74 3.43 22.35 8.2 23.97C8.8 24.09 9.02 23.71 9.02 23.38C9.02 23.09 9.01 22.12 9.01 21.09C5.67 21.84 4.96 19.64 4.96 19.64C4.42 18.22 3.63 17.84 3.63 17.84C2.54 17.08 3.71 17.09 3.71 17.09C4.92 17.18 5.55 18.36 5.55 18.36C6.62 20.24 8.36 19.7 9.04 19.38C9.15 18.59 9.46 18.04 9.81 17.74C7.14 17.43 4.34 16.37 4.34 11.66C4.34 10.31 4.81 9.22 5.57 8.35C5.45 8.04 5.04 6.79 5.69 5.1C5.69 5.1 6.7 4.77 8.99 6.36C9.95 6.09 10.98 5.95 12 5.94C13.02 5.95 14.04 6.09 15 6.36C17.29 4.77 18.3 5.1 18.3 5.1C18.95 6.79 18.54 8.04 18.42 8.35C19.18 9.22 19.65 10.31 19.65 11.66C19.65 16.38 16.84 17.42 14.17 17.73C14.6 18.11 14.99 18.86 14.99 20.01C14.99 21.65 14.97 22.98 14.97 23.38C14.97 23.71 15.19 24.09 15.8 23.97C20.56 22.34 24 17.73 24 12.3C24 5.5 18.62 0 12 0Z" fill="#161514" fill-rule="evenodd"></path>
+                        <path d="M4.58 17.58C4.55 17.64 4.46 17.65 4.37 17.61C4.28 17.57 4.23 17.49 4.26 17.43C4.29 17.37 4.38 17.35 4.47 17.39C4.56 17.43 4.61 17.52 4.58 17.58Z" fill="#161514" fill-rule="evenodd"></path>
+                        <path d="M5.06 18.13C5 18.18 4.89 18.16 4.82 18.07C4.74 17.99 4.72 17.87 4.78 17.82C4.84 17.76 4.95 17.79 5.03 17.87C5.11 17.96 5.12 18.07 5.06 18.13Z" fill="#161514" fill-rule="evenodd"></path>
+                        <path d="M5.53 18.83C5.46 18.88 5.34 18.83 5.27 18.72C5.19 18.61 5.19 18.48 5.27 18.43C5.34 18.38 5.46 18.43 5.53 18.53C5.61 18.65 5.61 18.78 5.53 18.83Z" fill="#161514" fill-rule="evenodd"></path>
+                        <path d="M6.18 19.51C6.11 19.58 5.97 19.56 5.87 19.46C5.77 19.36 5.74 19.22 5.8 19.15C5.87 19.07 6.01 19.1 6.11 19.19C6.22 19.29 6.25 19.43 6.18 19.51Z" fill="#161514" fill-rule="evenodd"></path>
+                        <path d="M7.07 19.9C7.04 19.99 6.91 20.04 6.77 20C6.64 19.96 6.55 19.84 6.58 19.75C6.6 19.65 6.74 19.61 6.88 19.65C7.01 19.69 7.1 19.8 7.07 19.9Z" fill="#161514" fill-rule="evenodd"></path>
+                        <path d="M8.05 19.97C8.06 20.07 7.94 20.16 7.8 20.16C7.66 20.16 7.54 20.08 7.54 19.98C7.54 19.88 7.65 19.8 7.79 19.79C7.94 19.79 8.05 19.87 8.05 19.97Z" fill="#161514" fill-rule="evenodd"></path>
+                        <path d="M8.96 19.81C8.98 19.91 8.88 20.01 8.74 20.04C8.6 20.07 8.47 20.01 8.46 19.91C8.44 19.81 8.54 19.71 8.68 19.68C8.82 19.66 8.95 19.71 8.96 19.81Z" fill="#161514" fill-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </div>
+            <div id="huggingface" style="opacity: 1;">
+                <a href="https://huggingface.co/OhMyKing" target="_blank">
+                    <svg fill="black" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg"><title>HuggingFace</title><path d="M16.781 3.277c2.997 1.704 4.844 4.851 4.844 8.258 0 .995-.155 1.955-.443 2.857a1.332 1.332 0 011.125.4 1.41 1.41 0 01.2 1.723c.204.165.352.385.428.632l.017.062c.06.222.12.69-.2 1.166.244.37.279.836.093 1.236-.255.57-.893 1.018-2.128 1.5l-.202.078-.131.048c-.478.173-.89.295-1.061.345l-.086.024c-.89.243-1.808.375-2.732.394-1.32 0-2.3-.36-2.923-1.067a9.852 9.852 0 01-3.18.018C9.778 21.647 8.802 22 7.494 22a11.249 11.249 0 01-2.541-.343l-.221-.06-.273-.08a16.574 16.574 0 01-1.175-.405c-1.237-.483-1.875-.93-2.13-1.501-.186-.4-.151-.867.093-1.236a1.42 1.42 0 01-.2-1.166c.069-.273.226-.516.447-.694a1.41 1.41 0 01.2-1.722c.233-.248.557-.391.917-.407l.078-.001a9.385 9.385 0 01-.44-2.85c0-3.407 1.847-6.554 4.844-8.258a9.822 9.822 0 019.687 0zM4.188 14.758c.125.687 2.357 2.35 2.14 2.707-.19.315-.796-.239-.948-.386l-.041-.04-.168-.147c-.561-.479-2.304-1.9-2.74-1.432-.43.46.119.859 1.055 1.42l.784.467.136.083c1.045.643 1.12.84.95 1.113-.188.295-3.07-2.1-3.34-1.083-.27 1.011 2.942 1.304 2.744 2.006-.2.7-2.265-1.324-2.685-.537-.425.79 2.913 1.718 2.94 1.725l.16.04.175.042c1.227.284 3.565.65 4.435-.604.673-.973.64-1.709-.248-2.61l-.057-.057c-.945-.928-1.495-2.288-1.495-2.288l-.017-.058-.025-.072c-.082-.22-.284-.639-.63-.584-.46.073-.798 1.21.12 1.933l.05.038c.977.721-.195 1.21-.573.534l-.058-.104-.143-.25c-.463-.799-1.282-2.111-1.739-2.397-.532-.332-.907-.148-.782.541zm14.842-.541c-.533.335-1.563 2.074-1.94 2.751a.613.613 0 01-.687.302.436.436 0 01-.176-.098.303.303 0 01-.049-.06l-.014-.028-.008-.02-.007-.019-.003-.013-.003-.017a.289.289 0 01-.004-.048c0-.12.071-.266.25-.427.026-.024.054-.047.084-.07l.047-.036c.022-.016.043-.032.063-.049.883-.71.573-1.81.131-1.917l-.031-.006-.056-.004a.368.368 0 00-.062.006l-.028.005-.042.014-.039.017-.028.015-.028.019-.036.027-.023.02c-.173.158-.273.428-.31.542l-.016.054s-.53 1.309-1.439 2.234l-.054.054c-.365.358-.596.69-.702 1.018-.143.437-.066.868.21 1.353.055.097.117.195.187.296.882 1.275 3.282.876 4.494.59l.286-.07.25-.074c.276-.084.736-.233 1.2-.42l.188-.077.065-.028.064-.028.124-.056.081-.038c.529-.252.964-.543.994-.827l.001-.036a.299.299 0 00-.037-.139c-.094-.176-.271-.212-.491-.168l-.045.01c-.044.01-.09.024-.136.04l-.097.035-.054.022c-.559.23-1.238.705-1.607.745h.006a.452.452 0 01-.05.003h-.024l-.024-.003-.023-.005c-.068-.016-.116-.06-.14-.142a.22.22 0 01-.005-.1c.062-.345.958-.595 1.713-.91l.066-.028c.528-.224.97-.483.985-.832v-.04a.47.47 0 00-.016-.098c-.048-.18-.175-.251-.36-.251-.785 0-2.55 1.36-2.92 1.36-.025 0-.048-.007-.058-.024a.6.6 0 01-.046-.088c-.1-.238.068-.462 1.06-1.066l.209-.126c.538-.32 1.01-.588 1.341-.831.29-.212.475-.406.503-.6l.003-.028c.008-.113-.038-.227-.147-.344a.266.266 0 00-.07-.054l-.034-.015-.013-.005a.403.403 0 00-.13-.02c-.162 0-.369.07-.595.18-.637.313-1.431.952-1.826 1.285l-.249.215-.033.033c-.08.078-.288.27-.493.386l-.071.037-.041.019a.535.535 0 01-.122.036h.005a.346.346 0 01-.031.003l.01-.001-.013.001c-.079.005-.145-.021-.19-.095a.113.113 0 01-.014-.065c.027-.465 2.034-1.991 2.152-2.642l.009-.048c.1-.65-.271-.817-.791-.493zM11.938 2.984c-4.798 0-8.688 3.829-8.688 8.55 0 .692.083 1.364.24 2.008l.008-.009c.252-.298.612-.46 1.017-.46.355.008.699.117.993.312.22.14.465.384.715.694.261-.372.69-.598 1.15-.605.852 0 1.367.728 1.562 1.383l.047.105.06.127c.192.396.595 1.139 1.143 1.68 1.06 1.04 1.324 2.115.8 3.266a8.865 8.865 0 002.024-.014c-.505-1.12-.26-2.17.74-3.186l.066-.066c.695-.684 1.157-1.69 1.252-1.912.195-.655.708-1.383 1.56-1.383.46.007.889.233 1.15.605.25-.31.495-.553.718-.694a1.87 1.87 0 01.99-.312c.357 0 .682.126.925.36.14-.61.215-1.245.215-1.898 0-4.722-3.89-8.55-8.687-8.55zm1.857 8.926l.439-.212c.553-.264.89-.383.89.152 0 1.093-.771 3.208-3.155 3.262h-.184c-2.325-.052-3.116-2.06-3.156-3.175l-.001-.087c0-1.107 1.452.586 3.25.586.716 0 1.379-.272 1.917-.526zm4.017-3.143c.45 0 .813.358.813.8 0 .441-.364.8-.813.8a.806.806 0 01-.812-.8c0-.442.364-.8.812-.8zm-11.624 0c.448 0 .812.358.812.8 0 .441-.364.8-.812.8a.806.806 0 01-.813-.8c0-.442.364-.8.813-.8zm7.79-.841c.32-.384.846-.54 1.33-.394.483.146.83.564.878 1.06.048.495-.212.97-.659 1.203-.322.168-.447-.477-.767-.585l.002-.003c-.287-.098-.772.362-.925.079a1.215 1.215 0 01.14-1.36zm-4.323 0c.322.384.377.92.14 1.36-.152.283-.64-.177-.925-.079l.003.003c-.108.036-.194.134-.273.24l-.118.165c-.11.15-.22.262-.377.18a1.226 1.226 0 01-.658-1.204c.048-.495.395-.913.878-1.059a1.262 1.262 0 011.33.394z"></path></svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- 自定义光标 -->
+        <div class="custom-cursor" style="left: 912px; top: 119px;"></div>
+
+        <!-- Logo变形容器 -->
+        <div id="morphing-logo" style="left: 2.5vw; height: 6vh; top: 1vh; transform: translateX(0%);">
+            <svg width="100%" height="100%" viewBox="0 0 1200 300" preserveAspectRatio="xMidYMid meet" overflow="visible" id="svg-logo">
+                <path id="half-circle" d="M75.6 120 C33.84 120 0 153.57 0 195 C0 236.42 33.84 270 75.6 270 L75.6 120 Z" fill="#F00000" fill-opacity="1.000000" fill-rule="evenodd"></path>
+                <path id="rect1" d="M100 0 L115 0 C134.33 0 150 15.67 150 35 L150 270 L100 270 L100 0 Z" fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"></path>
+                <path id="rect2" d="M169.5 124 L184.5 124 C203.83 124 219.5 139.67 219.5 159 L219.5 270 L169.5 270 L169.5 124 Z" fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"></path>
+                <path id="rect3" d="M239.5 128 L254.5 128 C273.82 128 289.5 143.67 289.5 163 L289.5 274 L239.5 274 L239.5 128 Z" fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"></path>
+                <path id="rect4" d="M309.5 128 L324.5 128 C343.83 128 359.5 143.67 359.5 163 L359.5 274 L309.5 274 L309.5 128 Z" fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"></path>
+                <path id="rect5" d="M380 128 L395 128 C414.33 128 430 143.67 430 163 L430 274 L380 274 L380 128 Z" fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"></path>
+                <path id="rect6" d="M450 129 L465 129 C484.33 129 500 144.67 500 164 L500 275 L485 275 C465.67 275 450 259.32 450 240 L450 129 Z" fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"></path>
+                <path id="rect7" d="M520 129 L535 129 C554.33 129 570 144.67 570 164 L570 384 C570 403.33 554.33 419 535 419 L520 419 L520 129 Z" fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"></path>
+                <circle id="circle" cx="605" cy="259" r="15" fill="#F00000" fill-opacity="1.000000"></circle>
+            </svg>
+        </div>
+
+        <!-- 滚动容器 -->
+        <div class="scroll-container" id="scroll-container">
+            <!-- 第1页 -->
+            <section id="page1" class="page-section">
+                <div class="miniLogo">
+                   <svg width="125.000000" height="37.000000" viewBox="0 0 125 37" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs></defs>
+                        <path id="矩形 1" d="M18.99 0C21.99 0 24.42 2.42 24.42 5.42L24.42 33.88L18.99 33.88L18.99 0Z" fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"></path>
+                        <path id="矩形 1" d="M26.53 17.66C29.53 17.66 31.96 20.09 31.96 23.09L31.96 33.88L26.53 33.88L26.53 17.66Z" fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"></path>
+                        <path id="矩形 1" d="M33.97 0C36.97 0 39.4 2.42 39.4 5.42L39.4 16.22C36.4 16.22 33.97 13.79 33.97 10.79L33.97 0Z" fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"></path>
+                        <path id="矩形 1" d="M41.57 0C44.57 0 47 2.42 47 5.42L47 28.46C47 31.45 44.57 33.88 41.57 33.88L41.57 0Z" fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"></path>
+                        <path id="矩形 1" d="M26.48 0C29.48 0 31.91 2.42 31.91 5.42L31.91 16.22L26.48 16.22L26.48 0Z" fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"></path>
+                        <path id="矩形 1" d="M34.08 17.77C37.08 17.77 39.51 20.2 39.51 23.2L39.51 34L34.08 34L34.08 17.77Z" fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"></path>
+                        <path id="椭圆 1" d="M16.74 0C7.49 0 0 7.61 0 17C0 26.38 7.49 34 16.74 34L16.74 0Z" fill="#F00000" fill-opacity="1.000000" fill-rule="evenodd"></path>
+                        <path id="OhMyKing's" d="M57.08 9.4Q58.05 10.24 59.73 10.24Q61.41 10.24 62.37 9.4Q62.47 9.32 62.56 9.23Q62.72 9.07 62.86 8.9Q63.87 7.7 63.87 5.66Q63.87 3.52 62.8 2.34Q62.69 2.22 62.56 2.1Q62.47 2.01 62.37 1.93Q61.41 1.09 59.73 1.09Q58.05 1.09 57.08 1.93Q56.99 2.01 56.9 2.1Q56.77 2.22 56.65 2.35Q55.59 3.53 55.59 5.66Q55.59 7.69 56.58 8.89Q56.73 9.07 56.9 9.23Q56.99 9.32 57.08 9.4ZM99.49 2.85L99.49 1.31L97.8 1.31L97.8 2.85L99.49 2.85ZM72.54 10L74.23 10L74.23 4.15Q74.23 3.9 74.22 3.45Q74.21 2.99 74.21 2.75L75.84 10L77.59 10L79.22 2.75Q79.22 2.99 79.22 3.45Q79.21 3.9 79.21 4.15L79.21 10L80.89 10L80.89 1.36L78.3 1.36L76.74 8.15L75.17 1.36L72.54 1.36L72.54 10ZM94.58 10L96.9 10L93.17 4.91L96.71 1.36L94.38 1.36L91.05 4.91L91.05 1.36L89.27 1.36L89.27 10L91.05 10L91.05 7.11L91.91 6.22L94.58 10ZM117.17 1.36L115.57 1.36L115.86 4.93L116.88 4.93L117.17 1.36ZM70.88 10L70.88 6.25Q70.88 5.39 70.82 5.01Q70.76 4.63 70.5 4.28Q70.35 4.07 70.15 3.91Q69.95 3.75 69.71 3.65Q69.22 3.44 68.63 3.44Q68.36 3.44 68.1 3.5Q67.86 3.56 67.62 3.66Q67.15 3.88 66.78 4.44L66.78 1.39L65.12 1.39L65.12 10L66.78 10L66.78 6.54Q66.78 5.72 67.13 5.28Q67.23 5.15 67.35 5.06Q67.66 4.83 68.13 4.83Q68.59 4.83 68.84 5.06Q68.93 5.15 69 5.28Q69.17 5.59 69.17 6.11L69.17 10L70.88 10ZM62.06 5.66Q62.06 7.12 61.43 7.91Q61.17 8.25 60.82 8.44Q60.35 8.71 59.73 8.71Q59.12 8.71 58.65 8.45Q58.29 8.25 58.02 7.91Q57.38 7.12 57.38 5.66Q57.38 4.21 58.02 3.41Q58.29 3.08 58.65 2.88Q59.12 2.62 59.73 2.62Q60.35 2.62 60.82 2.89Q61.16 3.08 61.43 3.42Q62.06 4.21 62.06 5.66ZM123.25 4.08Q123.15 3.98 123.02 3.9Q122.27 3.43 121.07 3.43Q119.83 3.43 119.14 4.04Q119.13 4.05 119.12 4.06Q118.7 4.44 118.54 4.91Q118.42 5.22 118.42 5.58Q118.42 6.2 118.72 6.58Q118.79 6.66 118.87 6.73Q119.31 7.14 120.4 7.41Q121.9 7.76 122.14 7.91Q122.25 7.98 122.31 8.08Q122.37 8.19 122.37 8.34Q122.37 8.46 122.32 8.55Q122.25 8.69 122.08 8.78Q121.79 8.92 121.3 8.92Q120.46 8.92 120.15 8.59Q119.98 8.4 119.92 7.96L118.23 7.96Q118.23 8.49 118.44 8.92Q118.62 9.28 118.95 9.58Q119.67 10.21 121.17 10.21Q122.65 10.21 123.35 9.61Q123.68 9.33 123.86 8.98Q124.06 8.57 124.06 8.06Q124.06 7.65 123.9 7.31Q123.78 7.06 123.57 6.86Q123.07 6.39 122.07 6.15Q120.58 5.82 120.33 5.69Q120.22 5.63 120.16 5.53Q120.09 5.42 120.09 5.27Q120.09 5.22 120.1 5.17Q120.14 5 120.32 4.87Q120.55 4.7 121.1 4.7Q121.73 4.7 122.01 5.02Q122.02 5.03 122.03 5.04Q122.18 5.23 122.21 5.55L123.88 5.55Q123.79 4.58 123.25 4.08ZM103.33 5.07Q103.64 4.84 104.11 4.84Q104.6 4.84 104.86 5.09Q104.98 5.19 105.05 5.34Q105.19 5.61 105.19 6.11L105.19 10L106.9 10L106.9 5.69Q106.9 4.55 106.33 4.03Q106.3 4 106.27 3.97Q106.2 3.92 106.13 3.87Q105.53 3.46 104.65 3.46Q103.88 3.46 103.38 3.82Q103.36 3.83 103.34 3.84Q103.05 4.06 102.73 4.55L102.73 3.62L101.12 3.62L101.12 10L102.78 10L102.78 6.54Q102.78 5.95 102.95 5.57Q103.09 5.25 103.33 5.07ZM111.15 11.34Q110.51 11.34 110.24 11.11Q110.09 10.99 110.02 10.69L108.2 10.69Q108.24 11.23 108.51 11.62Q108.72 11.92 109.05 12.13Q109.83 12.61 111.05 12.61Q112.92 12.61 113.68 11.69Q113.74 11.61 113.79 11.53Q114.21 10.9 114.21 9.67L114.21 3.61L112.59 3.61L112.59 4.53Q112.27 3.96 111.79 3.69Q111.7 3.64 111.6 3.6Q111.25 3.46 110.77 3.46Q109.99 3.46 109.42 3.8Q109.04 4.03 108.76 4.43Q108.69 4.51 108.64 4.6Q108.05 5.52 108.05 6.82Q108.05 8.28 108.76 9.14Q108.77 9.15 108.78 9.16Q109.07 9.49 109.42 9.7Q109.99 10.02 110.75 10.02Q111.54 10.02 112.04 9.64Q112.32 9.44 112.56 9.03L112.56 9.44Q112.56 10.35 112.36 10.74Q112.28 10.89 112.17 11.01Q111.83 11.34 111.15 11.34ZM86.35 3.61L85.03 8.32L83.64 3.61L81.78 3.61L84.12 10.28Q84.15 10.35 84.02 10.66Q83.89 10.98 83.75 11.08Q83.59 11.18 83.37 11.21Q83.15 11.24 82.9 11.23L82.69 11.22L82.69 12.56Q82.96 12.57 83.1 12.58Q83.23 12.58 83.45 12.58Q84.56 12.58 84.93 12.14Q85.3 11.71 85.93 9.89L88.12 3.61L86.35 3.61ZM99.49 10L99.49 3.61L97.8 3.61L97.8 10L99.49 10ZM110.43 8.42Q110.13 8.22 109.96 7.82Q109.77 7.38 109.77 6.83Q109.77 6.18 109.95 5.74Q110.12 5.32 110.43 5.11Q110.73 4.91 111.16 4.91Q111.53 4.91 111.82 5.07Q112.03 5.19 112.19 5.39Q112.58 5.86 112.58 6.77Q112.58 7.74 112.17 8.18Q111.96 8.42 111.69 8.53Q111.45 8.62 111.18 8.62Q110.74 8.62 110.43 8.42Z" fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"></path>
+                        <path id="Space" d="M64.17 28.22Q63.37 28.5 62.09 28.5Q59.99 28.5 59.1 27.46Q59.09 27.45 59.08 27.43Q58.6 26.85 58.44 25.66L54.99 25.66Q54.99 27.32 55.72 28.54Q56.18 29.3 56.92 29.9Q58.86 31.44 62.23 31.44Q65.54 31.44 67.35 29.88Q68.28 29.07 68.73 28.05Q69.16 27.09 69.16 25.94Q69.16 24.32 68.4 23.24Q68.07 22.78 67.61 22.42Q66.62 21.63 64.66 21.16L61.68 20.45Q59.96 20.04 59.43 19.73Q59.01 19.5 58.81 19.14Q58.61 18.8 58.61 18.35Q58.61 17.84 58.82 17.45Q59.03 17.06 59.44 16.78Q60.28 16.22 61.67 16.22Q62.92 16.22 63.77 16.65Q64.28 16.92 64.61 17.34Q65.07 17.94 65.13 18.87L68.6 18.87Q68.53 17.01 67.63 15.74Q67.2 15.13 66.58 14.66Q66.19 14.38 65.77 14.14Q64.1 13.22 61.92 13.22Q58.65 13.22 56.96 14.75Q56.16 15.48 55.74 16.38Q55.27 17.39 55.27 18.61Q55.27 20.4 56.14 21.52Q56.5 21.99 57.02 22.35Q58.05 23.06 60.75 23.67L62.57 24.08Q64.18 24.43 64.93 24.89Q65.33 25.14 65.52 25.5Q65.68 25.82 65.68 26.21Q65.68 26.85 65.4 27.31Q65.03 27.91 64.17 28.22ZM122.67 29.55Q123.72 28.38 123.85 27.25L120.44 27.25Q120.17 27.81 119.82 28.12Q119.7 28.24 119.56 28.33Q118.98 28.71 118.14 28.71Q117.29 28.71 116.65 28.34Q116.56 28.29 116.48 28.23Q116.33 28.13 116.2 28.01Q115.33 27.2 115.27 25.53L124.02 25.53Q124.04 23.88 123.91 23Q123.69 21.5 122.94 20.37Q122.3 19.37 121.39 18.79Q121.12 18.62 120.83 18.48Q119.55 17.88 117.96 17.88Q116.21 17.88 114.89 18.63Q114.18 19.03 113.59 19.65Q113.56 19.68 113.53 19.71Q111.91 21.48 111.91 24.74Q111.91 28.09 113.58 29.68Q113.68 29.77 113.77 29.85Q114.7 30.63 115.78 31.02Q116.85 31.42 118.07 31.42Q120.28 31.42 121.75 30.38Q122.25 30.03 122.67 29.55ZM86.84 19.43Q86.77 19.52 86.7 19.6Q85.87 20.68 85.76 22.36L88.99 22.36Q89.1 21.62 89.46 21.19Q89.46 21.18 89.46 21.18Q89.95 20.6 91.13 20.6Q92.19 20.6 92.73 20.9Q92.89 20.98 93 21.11Q93.28 21.42 93.28 21.98Q93.28 22.21 93.19 22.39Q93.03 22.73 92.56 22.93Q92.16 23.11 91.24 23.23L90.1 23.37Q88.17 23.61 87.17 24.19Q86.47 24.59 86.04 25.19Q85.35 26.15 85.35 27.6Q85.35 28.99 86.02 29.89Q86.22 30.17 86.49 30.4Q86.74 30.62 87.02 30.79Q88 31.39 89.35 31.39Q90.47 31.39 91.4 30.97Q91.6 30.88 91.79 30.77Q92.49 30.36 93.06 29.82Q93.23 29.66 93.38 29.5Q93.42 29.93 93.48 30.27Q93.53 30.61 93.69 31L97.32 31L97.32 30.5Q96.99 30.35 96.83 30.12Q96.66 29.88 96.63 29.23Q96.6 28.36 96.6 27.75L96.6 21.89Q96.6 20.26 95.79 19.37Q95.46 18.99 94.98 18.75Q93.35 17.92 91.25 17.92Q88.19 17.92 86.84 19.43ZM107.2 22.8L110.62 22.8Q110.35 20.15 108.9 19.06Q108.86 19.03 108.81 19Q107.28 17.92 104.88 17.92Q102.86 17.92 101.47 18.85Q100.91 19.22 100.45 19.75Q98.84 21.57 98.84 24.87Q98.84 27.68 100.19 29.48Q100.24 29.55 100.3 29.61Q100.53 29.91 100.81 30.16Q102.25 31.44 104.83 31.44Q106.86 31.44 108.23 30.49Q108.95 30 109.48 29.25Q110.28 28.15 110.51 26.94Q110.56 26.66 110.59 26.37L107.18 26.37Q107.07 27.37 106.58 28.01Q106.54 28.06 106.5 28.1Q106 28.64 104.91 28.64Q104.13 28.64 103.58 28.28Q102.98 27.88 102.66 27.05Q102.34 26.19 102.34 24.78Q102.34 23.31 102.66 22.42Q103 21.51 103.65 21.09Q104.2 20.74 104.97 20.74Q105.86 20.74 106.39 21.17Q106.58 21.32 106.72 21.51Q106.84 21.69 106.93 21.88Q107.13 22.31 107.2 22.8ZM83.81 24.44Q83.81 21.25 82.26 19.59Q81.44 18.73 80.44 18.32Q79.53 17.94 78.46 17.94Q77.37 17.94 76.49 18.37Q76.14 18.55 75.82 18.8Q75.21 19.28 74.67 20.11L74.67 18.22L71.47 18.22L71.47 36.02L74.77 36.02L74.77 29.37Q75.3 30.17 75.85 30.6Q75.92 30.65 76 30.7Q76.97 31.36 78.38 31.36Q79.66 31.36 80.69 30.85Q81.59 30.41 82.29 29.59Q83.81 27.82 83.81 24.44ZM119.78 21.36Q120.47 22.04 120.55 23.33L115.35 23.33Q115.52 22.09 116.16 21.36Q116.31 21.19 116.5 21.05Q117.08 20.64 117.96 20.64Q118.62 20.64 119.16 20.9Q119.47 21.06 119.74 21.32Q119.76 21.34 119.78 21.36ZM79.84 22.27Q80.36 23.31 80.36 24.61Q80.36 26.4 79.63 27.48Q79.32 27.94 78.89 28.2Q78.31 28.56 77.5 28.56Q76.81 28.56 76.25 28.28Q76.04 28.18 75.84 28.03Q75.76 27.97 75.69 27.91Q74.66 26.98 74.66 24.9Q74.66 23.5 75.01 22.58Q75.36 21.69 76.01 21.26Q76.62 20.86 77.5 20.86Q78.46 20.86 79.09 21.32Q79.44 21.58 79.69 22Q79.77 22.13 79.84 22.27ZM89.45 28.76Q89.31 28.68 89.19 28.58Q89.13 28.54 89.09 28.49Q88.71 28.11 88.71 27.35Q88.71 26.8 88.96 26.42Q89.15 26.13 89.48 25.93Q89.94 25.66 90.99 25.48L91.74 25.33Q92.3 25.23 92.63 25.11Q92.95 24.98 93.26 24.78L93.26 26.03Q93.23 27.58 92.45 28.24Q92.39 28.29 92.32 28.33Q91.8 28.7 91.22 28.85Q90.79 28.97 90.33 28.97Q89.83 28.97 89.45 28.76Z" fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"></path>
+                    </svg>
+                </div>
+
+                <div class="Logos">
+                    <div class="thick-bar"></div>
+                </div>
+
+                <!-- 初始导航栏 -->
+                <div class="topbar-initial" id="topbar-initial">
+                    <div class="ohmyking-space">OhMyKing's Space</div>
+                    <div class="ohmyking">@OhMyKing</div>
+                    <div class="position-button-group">
+                        <div class="about top-text-button text-button">WHOAMI</div>
+                        <div class="slash1"></div>
+                        <div class="work top-text-button text-button">WORK</div>
+                        <div class="slash2"></div>
+                        <div class="contact top-text-button text-button">CONTACT</div>
+                    </div>
+                    <div class="thin-horizontal-bar"></div>
+                </div>
+                <!-- <div style="position:absolute; bottom: 0; right: 0;height: 50vh; width: 2.5vw;background-color: rgb(242, 45, 64);z-index: 1000;overflow: hidden;"></div> -->
+                <div class="information">
+                    <div class="thin-vertical-bar"></div>
+                    <div class="background-text-ground">
+                        <div id="line1">
+                            <div class="learner1" style="letter-spacing: -2px;">Learner</div>
+                            <div class="background-text" style="letter-spacing: -2px;">DeveloperDesignerCreator</div>
+                        </div>
+                        <div id="line2">
+                            <div class="developer1" style="letter-spacing: -2px;">Developer</div>
+                            <div class="background-text" style="letter-spacing: -2px;">DesignerCreatorLearner</div>
+                        </div>
+                        <div id="line3">
+                            <div class="designer1" style="letter-spacing: -2px;">Designer</div>
+                            <div class="background-text" style="letter-spacing: -2px;">CreatorLearnerDeveloper</div>
+                        </div>
+                        <div id="line4">
+                            <div class="creater1" style="letter-spacing: -2px;">Creator</div>
+                            <div class="background-text" style="letter-spacing: -2px;">LearnerDeveloperDesigner</div>
+                        </div>
+                        <div id="line5">
+                            <div class="learner2" style="letter-spacing: -2px;">Learner</div>
+                            <div class="background-text" style="letter-spacing: -2px;">DeveloperDesignerCreator</div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="ohmykings">OhMyKing's</div>
+                        <div class="space">SPACE</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 第2页 - 个人简介 -->
+            <section id="page2" class="page-section active-section">
+                <div class="title-section">
+                    <div class="OhMyKing">OhMyKing</div>
+                </div>
+                <div class="text-container">
+                    <p class="Paragrapher1">
+                        <span class="normal">BUPT student specializing in</span>
+                        <span class="normal-I">Agents</span>
+                        <span class="normal-I">Reinforcement Learning </span>
+                        <span class="normal">and</span>
+                        <span class="normal-I">LLM Safety</span>
+                    </p>
+                    <div class="Paragrapher2">Communist Party member. Full-stack developer committed to advancing Artificial General Intelligence. Co-founding AegisIntellect to advance AI safety technologies. Devoted to comprehensive excellence and unwavering humanistic values. Passionate about all forms of beauty.</div>
+                </div>
+            </section>
+
+            <!-- 第3页 - 身份展示 -->
+            <section id="page3" class="page-section">
+                <div class="text-group">
+                    <div class="A-Learner">A Learner</div>
+                    <div class="A-Designer">A Designer</div>
+                    <div class="A-Developer">A Developer</div>
+                </div>
+            </section>
+
+            <!-- 第4页 - 学习者 -->
+            <section id="page4" class="page-section">
+                <div id="three-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;"><div id="page4-textOverlay" style="position: absolute; top: 0px; left: 0px; pointer-events: none; width: 100%; height: 100%; overflow: hidden;"><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(91.8168px, 290.244px);">∇</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(98.9189px, 285.57px);">f</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(106.044px, 280.932px);">(</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(113.234px, 276.395px);">x</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(120.613px, 272.192px);">)</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(128.2px, 268.354px);"> </div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(135.868px, 264.69px);">=</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(143.653px, 261.272px);"> </div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(151.459px, 257.905px);">0</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(159.392px, 254.849px);"> </div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(167.326px, 251.792px);">•</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(175.325px, 248.915px);"> </div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(183.356px, 246.126px);">x</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(191.39px, 243.342px);">_</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(199.474px, 240.709px);">{</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(207.557px, 238.076px);">k</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(215.655px, 235.485px);">+</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(223.78px, 232.984px);">1</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(231.906px, 230.482px);">}</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(240.057px, 228.068px);"> </div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(248.231px, 225.726px);">=</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(256.404px, 223.385px);"> </div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(264.594px, 221.105px);">x</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(272.791px, 218.848px);">_</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(280.988px, 216.591px);">k</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(289.194px, 214.368px);"> </div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(297.401px, 212.148px);">-</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(305.61px, 209.935px);"> </div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(313.829px, 207.76px);">α</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(322.048px, 205.586px);">∇</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(330.272px, 203.43px);">f</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(338.501px, 201.293px);">(</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(346.73px, 199.156px);">x</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(354.963px, 197.032px);">_</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(363.195px, 194.909px);">k</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(371.43px, 192.795px);">)</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(379.666px, 190.686px);"> </div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(387.907px, 188.593px);">•</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(396.154px, 186.526px);"> </div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(404.404px, 184.472px);">G</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(412.66px, 182.442px);">R</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(420.921px, 180.435px);">A</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(429.189px, 178.454px);">D</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(437.468px, 176.521px);">I</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(445.757px, 174.627px);">E</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(454.064px, 172.82px);">N</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(462.388px, 171.088px);">T</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(470.73px, 169.446px);"> </div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(479.087px, 167.883px);">D</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(487.466px, 166.448px);">E</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(495.872px, 165.175px);">S</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(504.291px, 163.995px);">C</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(512.726px, 162.931px);">E</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(521.187px, 162.101px);">N</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(529.662px, 161.425px);">T</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(538.153px, 161.005px);"> </div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(546.654px, 160.843px);">•</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(555.152px, 161.06px);"> </div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(563.638px, 161.545px);">m</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(572.088px, 162.485px);">i</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(580.521px, 163.563px);">n</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(588.896px, 165.025px);"> </div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(597.261px, 166.548px);">f</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(605.593px, 168.232px);">(</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(613.894px, 170.067px);">x</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(622.196px, 171.902px);">)</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(630.48px, 173.813px);"> </div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(638.74px, 175.827px);">s</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(646.983px, 177.908px);">.</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(655.234px, 179.961px);">t</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(663.482px, 182.023px);">.</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(671.7px, 184.2px);"> </div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(679.904px, 186.431px);">g</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(688.094px, 188.713px);">(</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(696.259px, 191.081px);">x</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(704.381px, 193.596px);">)</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(712.471px, 196.208px);"> </div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(720.497px, 199.012px);">≤</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(728.451px, 202.011px);"> </div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(736.323px, 205.219px);">0</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(744.095px, 208.663px);"> </div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(751.698px, 212.466px);">•</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(759.106px, 216.639px);"> </div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(766.377px, 221.044px);">C</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(773.239px, 226.051px);">O</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(779.798px, 231.457px);">N</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(786.015px, 237.25px);">S</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(791.887px, 243.394px);">T</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(797.223px, 249.999px);">R</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(802.076px, 256.977px);">A</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(806.531px, 264.213px);">I</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(810.567px, 271.692px);">N</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(814.064px, 279.433px);">E</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(817.068px, 287.385px);">D</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(819.546px, 295.51px);"> </div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(821.436px, 303.796px);">O</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(822.691px, 312.198px);">P</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(823.255px, 320.676px);">T</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(823.123px, 329.172px);">I</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(822.44px, 337.645px);">M</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(821.231px, 346.058px);">I</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(819.514px, 354.384px);">Z</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(817.413px, 362.622px);">A</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(814.918px, 370.749px);">T</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(812.149px, 378.787px);">I</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(809.231px, 386.773px);">O</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(806.094px, 394.673px);">N</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(802.737px, 402.485px);"> </div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(799.242px, 410.234px);">•</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(795.699px, 417.962px);">∇</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(791.541px, 425.371px);">²</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(787.217px, 432.69px);">f</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(782.563px, 439.803px);">(</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(777.538px, 446.659px);">x</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(772.086px, 453.183px);">)</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(766.482px, 459.574px);"> </div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(760.617px, 465.728px);">⪰</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(754.56px, 471.694px);"> </div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(748.475px, 477.632px);">0</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(742.272px, 483.445px);"> </div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(736.119px, 489.312px);">•</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(730.018px, 495.234px);"> </div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(724.021px, 501.26px);">C</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(718.146px, 507.405px);">O</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(712.441px, 513.708px);">N</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(706.887px, 520.145px);">V</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(701.213px, 526.475px);">E</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(695.087px, 532.364px);">X</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(688.409px, 537.621px);">I</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(681.297px, 542.276px);">T</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(673.978px, 546.602px);">Y</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(666.563px, 550.76px);"> </div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(659.141px, 554.907px);">C</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(651.743px, 559.097px);">O</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(644.341px, 563.279px);">N</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(636.831px, 567.264px);">D</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(629.17px, 570.947px);">I</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(621.396px, 574.389px);">T</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(613.538px, 577.633px);">I</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(605.596px, 580.667px);">O</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(597.602px, 583.563px);">N</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(589.574px, 586.362px);"> </div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(581.507px, 589.045px);">•</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(573.422px, 591.674px);"> </div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(565.315px, 594.235px);">L</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(557.194px, 596.751px);">(</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(549.051px, 599.195px);">x</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(540.866px, 601.494px);">,</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(532.647px, 603.668px);">λ</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(524.389px, 605.691px);">)</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(516.1px, 607.581px);"> </div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(507.781px, 609.336px);">=</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(499.44px, 610.98px);"> </div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(491.072px, 612.486px);">f</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(482.677px, 613.827px);">(</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(474.266px, 615.068px);">x</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(465.84px, 616.201px);">)</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(457.399px, 617.215px);"> </div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(448.945px, 618.113px);">+</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(440.477px, 618.87px);"> </div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(431.997px, 619.486px);">λ</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(423.51px, 619.976px);">ᵀ</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(415.016px, 620.349px);">g</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(406.517px, 620.582px);">(</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(398.016px, 620.676px);">x</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(389.514px, 620.654px);">)</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(381.013px, 620.548px);"> </div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(372.513px, 620.381px);">•</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(364.014px, 620.13px);"> </div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(355.519px, 619.807px);">L</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(347.027px, 619.384px);">A</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(338.54px, 618.882px);">G</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(330.062px, 618.246px);">R</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(321.592px, 617.516px);">A</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(313.136px, 616.629px);">N</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(304.7px, 615.58px);">G</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(296.288px, 614.348px);">I</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(287.91px, 612.904px);">A</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(279.598px, 611.124px);">N</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(271.42px, 608.805px);"> </div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(263.432px, 605.901px);">F</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(255.619px, 602.549px);">U</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(247.922px, 598.94px);">N</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(240.303px, 595.166px);">C</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(232.731px, 591.301px);">T</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(225.193px, 587.368px);">I</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(217.678px, 583.392px);">O</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(210.2px, 579.348px);">N</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(202.861px, 575.058px);"> </div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(195.733px, 570.426px);">•</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(188.821px, 565.477px);"> </div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(182.153px, 560.203px);">|</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(175.676px, 554.696px);">|</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(169.333px, 549.035px);">x</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(163.042px, 543.316px);">_</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(156.712px, 537.641px);">{</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(150.527px, 531.811px);">k</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(144.829px, 525.508px);">+</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(139.583px, 518.82px);">1</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(134.732px, 511.84px);">}</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(130.297px, 504.589px);"> </div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(126.333px, 497.069px);">-</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(122.807px, 489.333px);"> </div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(119.524px, 481.491px);">x</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(116.314px, 473.618px);">*</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(113.117px, 465.74px);">|</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(109.896px, 457.872px);">|</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(106.665px, 450.008px);"> </div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(103.426px, 442.148px);">≤</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(100.207px, 434.279px);"> </div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(96.9817px, 426.412px);">L</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(93.7898px, 418.532px);">|</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(90.6734px, 410.622px);">|</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(87.696px, 402.658px);">x</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(84.805px, 394.664px);">_</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(82.0218px, 386.631px);">k</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(79.5024px, 378.511px);"> </div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(77.4264px, 370.271px);">-</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(75.6807px, 361.954px);"> </div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(74.2992px, 353.565px);">x</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(73.4755px, 345.105px);">*</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(73.281px, 336.622px);">|</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(73.8606px, 328.158px);">|</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(75.5068px, 319.817px);">²</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(78.3406px, 311.809px);"> </div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(82.3334px, 304.355px);">•</div><div class="page4-outline-text" style="transition: transform 150ms ease-out; transform: translate(86.9956px, 297.247px);"> </div></div><canvas data-engine="three.js r135dev" width="1830" height="1492" style="display: block; width: 915px; height: 746px; visibility: visible; touch-action: none; position: absolute; top: 0px; left: 0px;"></canvas></div>
+                <div>
+                    <div class="whoami-title">A Learner</div>
+                    <div style="z-index: 1000; position: absolute; top: 28vh; width: 36vw; height: 0; left: 2vw; bottom: 0; border: 1px solid rgb(0, 0, 0);"></div>
+                    <a href="https://ohmyking.github.io/blog/" target="_blank">
+                        <div class="middle-text-button" style="top: 28vh; left: 2.8vw; width: 35vw; height: 3vh; margin-top: 1vh;">
+                            <div style="position: relative; float: left; color: rgb(0, 0, 0); font-size: 1.8vh; text-align: left;">to my Blog</div>
+                            <div style="position: relative; float: right; color: rgb(0, 0, 0); font-size: 2.5vh; text-align: left;">→</div>
+                        </div>
+                    </a>
+                </div>
+                <div style="position: absolute; transform: translate(40%,-50%); right: 50vw; top:52vh; color: rgb(255, 255, 255); font-size: 3.8vw; line-height: 50px; text-align: center; z-index: 1001;">
+                    <div>Knowledge</div>
+                    <div>is</div>
+                    <div>Virtue</div>
+                </div>
+            </section>
+
+            <!-- 第5页 - 设计师 -->
+            <section id="page5" class="page-section">
+                <div>
+                    <div class="whoami-title-right">A Designer</div>
+                    <div style="z-index: 1000; position: absolute; top: 56vh; left: min(100vh,67vw); width: min(32vw,45vh); height: 0; border: 1px solid rgb(0, 0, 0);"></div>
+                    <a href="https://ohmyking.github.io/blog/" target="_blank">
+                        <div id="page5-middle-text-button">
+                            <div style="position: relative; float: left; color: rgb(0, 0, 0); font-size: 1.8vh; text-align: left;">to my Blog</div>
+                            <div style="position: relative; float: right; color: rgb(0, 0, 0); font-size: 2.5vh; text-align: left;">→</div>
+                        </div>
+                    </a>
+                </div>
+                <div style="position: absolute; left: min(119vh,81vw); top: 33vh; font-size: 5vh; color: rgb(0, 0, 0); text-align: left; z-index: 100; line-height: 1;">
+                    <div>Beauty</div>
+                    <div>is Purpose</div>
+                </div>
+                <div style="position: absolute; left: min(50vh,38vw); top: 46vh; font-size: 2.5vh; z-index: 100; text-align: right; font-weight: 200; line-height: 1;">
+                    <div>Know a little about</div>
+                    <div>Interaction design,</div>
+                    <div>Graphic design,</div>
+                    <div>3D design,</div>
+                </div>
+                <div style="text-align: center;">
+                    <canvas style="position: absolute; bottom: 0px; transform: translateX(-45%); width: 915px; height: 565px;" id="spiral-canvas" width="1830" height="1130"></canvas>
+                </div>
+            </section>
+
+            <!-- 第6页 - 开发者 -->
+            <section id="page6" class="page-section">
+                <canvas id="tree-canvas" width="915" height="746"></canvas>
+                <div>
+                    <div class="whoami-title">A Developer</div>
+                    <div style="z-index: 1000; position: absolute; top: 28vh; width: 43vw; height: 0; left: 2vw; bottom: 0; border: 1px solid rgb(0, 0, 0);"></div>
+                    <a href="https://ohmyking.github.io/blog/" target="_blank">
+                        <div id="page6-middle-text-button">
+                            <div style="position: relative; float: left; color: rgb(0, 0, 0); font-size: 1.8vh; text-align: left;">to my Blog</div>
+                            <div style="position: relative; float: right; color: rgb(0, 0, 0); font-size: 2.5vh; text-align: left;">→</div>
+                        </div>
+                    </a>
+                </div>
+                <div id="code-panel">
+                    <pre id="leftCodeContent"><span class="keyword">function</span> <span class="function">growBranch</span><span class="bracket">(</span><span class="property">length</span>, <span class="property">angle</span>, <span class="property">depth</span><span class="bracket">)</span> <span class="bracket">{</span>
+    <span class="keyword">if</span> <span class="bracket">(</span><span class="property">length</span> <span class="operator">&gt;</span> <span class="number">3</span><span class="bracket">)</span> <span class="bracket">{</span>
+        <span class="function">drawLine</span><span class="bracket">(</span><span class="property">length</span>, <span class="property">angle</span><span class="bracket">)</span>;
+        <span class="function">growBranch</span><span class="bracket">(</span>
+            <span class="property">length</span> <span class="operator">*</span> <span class="number">0.7</span>, 
+            <span class="property">angle</span> <span class="operator">-</span> <span class="number">20°</span>, 
+            <span class="property">depth</span> <span class="operator">+</span> <span class="number">1</span>
+        <span class="bracket">)</span>;
+        <span class="function">growBranch</span><span class="bracket">(</span>
+            <span class="property">length</span> <span class="operator">*</span> <span class="number">0.7</span>, 
+            <span class="property">angle</span> <span class="operator">+</span> <span class="number">20°</span>, 
+            <span class="property">depth</span> <span class="operator">+</span> <span class="number">1</span>
+        <span class="bracket">)</span>;
+    <span class="bracket">}</span>
+<span class="bracket">}</span>
+
+<span class="keyword">const</span> <span class="function">sakuraTree</span> <span class="operator">=</span> <span class="bracket">{</span>
+    <span class="property">type</span>: <span class="string">'cherry_blossom'</span>,
+    <span class="property">growth</span>: <span class="number">100%</span>,
+    <span class="property">phase</span>: <span class="string">'flourishing'</span>,
+    
+    <span class="property">structure</span>: <span class="bracket">{</span>
+        <span class="property">branches</span>: <span class="number">2215</span>,
+        <span class="property">depth</span>: <span class="number">12</span> <span class="operator">/</span> <span class="number">18</span>,
+        <span class="property">petals</span>: <span class="number">8</span>
+    <span class="bracket">}</span>
+<span class="bracket">}</span>;</pre>
+                </div>
+                <div style="position: absolute; left: 2vw; bottom: 5vh; color: rgb(0, 0, 0); font-family: Helvetica, Inter; font-size: 6vh; font-weight: 200; text-align: left;">
+                    Creation is Vitality.
+                </div>
+            </section>
+
+            <!-- 第7页 - 作品展示 -->
+            <section id="page7" class="page-section">
+                <div class="work-title">Works</div>
+                <div style="z-index: 1000; position: absolute; width: 23vw; height: 0; left: 2vw; bottom: 7vh; border: 1px solid rgb(0, 0, 0);"></div>
+                <a href="https://ohmyking.github.io/blog/" target="_blank">
+                    <div id="page7-bottom-text-button">
+                        <div style="position: relative; float: left; color: rgb(0, 0, 0); font-size: 1.8vh; text-align: left;">to my Blog</div>
+                        <div style="position: relative; float: right; color: rgb(0, 0, 0); font-size: 2.5vh; text-align: left;">→</div>
+                    </div>
+                </a>
+                <div id="canvas-wrapper"><canvas width="1830" height="1492" style="display: block; width: 915px; height: 746px;"></canvas></div>
+                <div class="preview-border"></div>
+                <div class="preview-container">
+                    <div class="preview-wrapper">
+                        <div class="preview-content">
+                            <div class="preview-image">
+                                <img src="./src/imgs/card1.png" alt="">
+                            </div>
+                            <div class="preview-date">2025-06-28</div>
+                            <h2 class="preview-title">OhMyKing's Space</h2>
+                            <h3 class="preview-subtitle">Geometry. Grid. Movement.</h3>
+                            <p class="preview-description">A digital space where International Style meets Constructivism. Built with clean HTML/CSS/JavaScript, enhanced by Three.js for spatial experiences and GSAP for fluid motion.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 第8页 - 联系方式 -->
+            <section id="page8" class="page-section">
+                <div id="ohmyking-section">
+                    <div id="ohmyking" style="transform: translate(calc(-50% + 9.93443px), calc(-50% - 6.80965px));">OhMyKing</div>
+                    <div id="ohmyking-shadow" style="transform: translate(calc(-50% + 14.9016px), calc(-50% - 10.2145px));">OhMyKing</div>
+                </div>
+
+                <div id="contact-me">CONTACT ME</div>
+                <div id="thin-short-horizontal-bar"></div>
+
+                <div id="contact">
+                    <div id="phone-section">
+                        <span>Phone</span>
+                        <span id="phone-content">+86 18310619188</span>
+                    </div>
+                    <div id="email-section">
+                        <span>E-mail</span>
+                        <span id="email-content">quarkwang@bupt.edu.cn</span>
+                    </div>
+                    <div id="wechat-section">
+                        <span>WeChat</span>
+                        <span id="wechat-content">quarkwang0803</span>
+                    </div>
+                </div>
+
+                <div id="thick-bar-last"></div>
+                <div id="monsterLogo-container-last">
+                    <svg width="100%" height="100%" viewBox="0 0 1200 300" preserveAspectRatio="xMidYMid meet" id="svg-logo">
+                        <path id="half-circle" d="M146.37 4C65.53 4 0 66.9 0 144.5C0 222.09 65.53 285 146.37 285L146.37 4Z" fill="#F00000" fill-opacity="1.000000" fill-rule="evenodd"></path>
+                        <path id="rect1" d="M194 2L256 2C275.32 2 291 17.67 291 37L291 283L194 283L194 2Z" fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"></path>
+                        <path id="rect2" d="M329 0L391 0C410.33 0 426 15.67 426 35L426 283L329 283L329 0Z" fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"></path>
+                        <path id="rect3" d="M465 2L527 2C546.33 2 562 17.67 562 37L562 285L465 285L465 2Z" fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"></path>
+                        <path id="rect4" d="M599 2L661 2C680.33 2 696 17.67 696 37L696 285L599 285L599 2Z" fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"></path>
+                        <path id="rect5" d="M735 2L797 2C816.33 2 832 17.67 832 37L832 285L735 285L735 2Z" fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"></path>
+                        <path id="rect6" d="M872 2L934 2C953.33 2 969 17.67 969 37L969 285L907 285C887.67 285 872 269.32 872 250L872 2Z" fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"></path>
+                        <path id="rect7" d="M1007 2L1069 2C1088.32 2 1104 17.67 1104 37L1104 250C1104 269.32 1088.32 285 1069 285L1007 285L1007 2Z" fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"></path>
+                        <circle id="colored-egg-button" cx="1170" cy="254" r="29" fill="#F00000" fill-opacity="1.000000"></circle>
+                    </svg>
+                </div>
+                <div class="a-ohmyking">@OhMyKing</div>
+            </section>
+
+            <div class="WHOAMI" id="WHOAMI" style="top: 20vh; right: 22.5vw; color: rgb(239, 238, 236); font-size: 9vw; -webkit-text-stroke: 0vw;">WHOAMI</div>
+        </div>
+    </div>
+
+    <script src="src/modules/confetti.browser.min.js" defer=""></script>
+    <script src="src/modules/three.min.js"></script>
+    <script src="src/modules/tween.umd.js"></script>
+    <script src="src/modules/gsap.min.js"></script>
+    <script src="src/pages/page4.js" type="module"></script>
+    <script src="src/pages/page5.js" type="module"></script>
+    <script src="src/pages/page6.js" type="module"></script>
+    <script src="src/pages/page7.js"></script>
+
+    <script>
+        console.warn = function() {};
+        // 主应用程序逻辑
+        (function() {
+            'use strict';
+
+            /* ==================== 工具函数 ==================== */
+            function adjustLetterSpacing() {
+                const targetWidth = window.innerWidth * 0.96; // 96vw
+                const lines = [
+                    { id: 'line1', mainClass: '.learner1', bgClass: '.background-text' },
+                    { id: 'line2', mainClass: '.developer1', bgClass: '.background-text' },
+                    { id: 'line3', mainClass: '.designer1', bgClass: '.background-text' },
+                    { id: 'line4', mainClass: '.creater1', bgClass: '.background-text' },
+                    { id: 'line5', mainClass: '.learner2', bgClass: '.background-text' }
+                ];
+                
+                // 设置最小字符间距限制，避免文字过度压缩
+                const minLetterSpacing = -2;
+                
+                lines.forEach(line => {
+                    const lineElement = document.getElementById(line.id);
+                    if (!lineElement) return;
+                    
+                    const mainElement = lineElement.querySelector(line.mainClass);
+                    const bgElement = lineElement.querySelector(line.bgClass);
+                    
+                    if (!mainElement || !bgElement) return;
+                    
+                    // 重置字间距以获取原始宽度
+                    mainElement.style.letterSpacing = '0px';
+                    bgElement.style.letterSpacing = '0px';
+                    
+                    // 获取当前宽度
+                    const mainWidth = mainElement.offsetWidth;
+                    const bgWidth = bgElement.offsetWidth;
+                    const currentTotalWidth = mainWidth + bgWidth;
+                    
+                    // 计算需要的额外空间（可能为负数）
+                    const extraSpace = targetWidth - currentTotalWidth;
+                    
+                    // 无论extraSpace是正数还是负数都进行调整
+                    if (extraSpace !== 0) {
+                        // 根据文本长度比例分配额外空间
+                        const mainTextLength = mainElement.textContent.length;
+                        const bgTextLength = bgElement.textContent.length;
+                        const totalTextLength = mainTextLength + bgTextLength;
+                        
+                        if (totalTextLength > 0) {
+                            // 计算每个元素应该增加/减少的字间距
+                            const mainLetterSpacing = (extraSpace * mainTextLength / totalTextLength) / mainTextLength;
+                            const bgLetterSpacing = (extraSpace * bgTextLength / totalTextLength) / bgTextLength;
+                            
+                            // 应用字间距，但不能小于最小值
+                            const finalMainSpacing = Math.max(mainLetterSpacing, minLetterSpacing);
+                            const finalBgSpacing = Math.max(bgLetterSpacing, minLetterSpacing);
+                            
+                            mainElement.style.letterSpacing = `${finalMainSpacing}px`;
+                            bgElement.style.letterSpacing = `${finalBgSpacing}px`;
+                        }
+                    }
+                });
+            }
+            // 解析SVG路径数据
+            function parsePath(pathString) {
+                const commands = [];
+                const regex = /([MLCZ])([^MLCZ]*)/g;
+                let match;
+
+                while ((match = regex.exec(pathString)) !== null) {
+                    const type = match[1];
+                    const valuesStr = match[2].trim();
+                    const values = valuesStr.split(/[\s,]+/).filter(v => v !== '').map(parseFloat);
+
+                    commands.push({ type, values });
+                }
+
+                return commands;
+            }
+
+            // 重建SVG路径字符串
+            function rebuildPath(commands) {
+                return commands.map(cmd => cmd.type + cmd.values.join(' ')).join(' ');
+            }
+
+            // SVG路径插值
+            function interpolatePath(path1, path2, progress) {
+                const commands1 = parsePath(path1);
+                const commands2 = parsePath(path2);
+
+                if (commands1.length !== commands2.length) {
+                    return progress < 0.5 ? path1 : path2;
+                }
+
+                const resultCommands = [];
+                for (let i = 0; i < commands1.length; i++) {
+                    const cmd1 = commands1[i];
+                    const cmd2 = commands2[i];
+
+                    if (cmd1.type !== cmd2.type || cmd1.values.length !== cmd2.values.length) {
+                        return progress < 0.5 ? path1 : path2;
+                    }
+
+                    const interpolatedValues = cmd1.values.map((val, j) => 
+                        val + (cmd2.values[j] - val) * progress
+                    );
+
+                    resultCommands.push({
+                        type: cmd1.type,
+                        values: interpolatedValues
+                    });
+                }
+
+                return rebuildPath(resultCommands);
+            }
+
+            // 缓动函数
+            function easeInOutCubic(t) {
+                return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+            }
+
+            // 值插值（支持颜色、百分比、vh/vw等）
+            function interpolateValue(start, end, progress) {
+                // RGBA颜色插值
+                if (typeof start === 'string' && start.includes('rgba(')) {
+                    const startMatch = start.match(/rgba\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*,\s*([\d.]+)\s*\)/);
+                    const endMatch = end.match(/rgba\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*,\s*([\d.]+)\s*\)/);
+
+                    if (startMatch && endMatch) {
+                        const r = Math.round(parseInt(startMatch[1]) + (parseInt(endMatch[1]) - parseInt(startMatch[1])) * progress);
+                        const g = Math.round(parseInt(startMatch[2]) + (parseInt(endMatch[2]) - parseInt(startMatch[2])) * progress);
+                        const b = Math.round(parseInt(startMatch[3]) + (parseInt(endMatch[3]) - parseInt(startMatch[3])) * progress);
+                        const a = Number((parseFloat(startMatch[4]) + (parseFloat(endMatch[4]) - parseFloat(startMatch[4])) * progress).toFixed(2));
+                        return `rgba(${r}, ${g}, ${b}, ${a})`;
+                    }
+                }
+
+                // 百分比值插值
+                if (typeof start === 'string' && start.includes('%')) {
+                    const startVal = parseFloat(start);
+                    const endVal = parseFloat(end);
+                    return (startVal + (endVal - startVal) * progress) + '%';
+                }
+
+                // vh/vw单位插值
+                if (typeof start === 'string' && (start.includes('vh') || start.includes('vw'))) {
+                    const startVal = parseFloat(start);
+                    const endVal = parseFloat(end);
+                    const unit = start.includes('vh') ? 'vh' : 'vw';
+                    return (startVal + (endVal - startVal) * progress) + unit;
+                }
+
+                // 数字插值
+                if (typeof start === 'number' && typeof end === 'number') {
+                    return start + (end - start) * progress;
+                }
+
+                return progress < 0.5 ? start : end;
+            }
+
+            // 暴露到全局
+            window.interpolatePath = interpolatePath;
+            window.bigSvgPaths = {
+                halfCircle: "M146.37 4C65.53 4 0 66.9 0 144.5C0 222.09 65.53 285 146.37 285L146.37 4Z",
+                rect1: "M194 2L256 2C275.32 2 291 17.67 291 37L291 283L194 283L194 2Z",
+                rect2: "M329 0L391 0C410.33 0 426 15.67 426 35L426 283L329 283L329 0Z",
+                rect3: "M465 2L527 2C546.33 2 562 17.67 562 37L562 285L465 285L465 2Z",
+                rect4: "M599 2L661 2C680.33 2 696 17.67 696 37L696 285L599 285L599 2Z",
+                rect5: "M735 2L797 2C816.33 2 832 17.67 832 37L832 285L735 285L735 2Z",
+                rect6: "M872 2L934 2C953.33 2 969 17.67 969 37L969 285L907 285C887.67 285 872 269.32 872 250L872 2Z",
+                rect7: "M1007 2L1069 2C1088.32 2 1104 17.67 1104 37L1104 250C1104 269.32 1088.32 285 1069 285L1007 285L1007 2Z",
+                circle: { cx: 1170, cy: 254, r: 29 }
+            };
+
+            window.smallSvgPaths = {
+                halfCircle: "M75.6 120C33.84 120 0 153.57 0 195C0 236.42 33.84 270 75.6 270L75.6 120Z",
+                rect1: "M100 0L115 0C134.33 0 150 15.67 150 35L150 270L100 270L100 0Z",
+                rect2: "M169.5 124L184.5 124C203.83 124 219.5 139.67 219.5 159L219.5 270L169.5 270L169.5 124Z",
+                rect3: "M239.5 128L254.5 128C273.82 128 289.5 143.67 289.5 163L289.5 274L239.5 274L239.5 128Z",
+                rect4: "M309.5 128L324.5 128C343.83 128 359.5 143.67 359.5 163L359.5 274L309.5 274L309.5 128Z",
+                rect5: "M380 128L395 128C414.33 128 430 143.67 430 163L430 274L380 274L380 128Z",
+                rect6: "M450 129L465 129C484.33 129 500 144.67 500 164L500 275L485 275C465.67 275 450 259.32 450 240L450 129Z",
+                rect7: "M520 129L535 129C554.33 129 570 144.67 570 164L570 384C570 403.33 554.33 419 535 419L520 419L520 129Z",
+                circle: { cx: 605, cy: 259, r: 15 }
+            };
+
+            /* ==================== 加载管理器 ==================== */
+            
+            const LoadingManager = {
+                progress: 0,
+                startTime: Date.now(),
+
+                init() {
+                    this.updateProgressDisplay();
+                    
+                    if (document.readyState === 'complete') {
+                        this.onComplete();
+                    } else {
+                        window.addEventListener('load', () => this.onComplete());
+                    }
+
+                    this.simulateProgress();
+                },
+
+                simulateProgress() {
+                    const duration = 2000;
+                    const interval = 50;
+                    const steps = duration / interval;
+                    const increment = 100 / steps;
+
+                    const progressInterval = setInterval(() => {
+                        if (this.progress < 100) {
+                            const easedIncrement = this.easeOutProgress(this.progress, increment);
+                            this.progress = Math.min(this.progress + easedIncrement, 100);
+                            this.updateProgressDisplay();
+                        } else {
+                            clearInterval(progressInterval);
+                        }
+                    }, interval);
+                },
+
+                easeOutProgress(currentProgress, baseIncrement) {
+                    if (currentProgress < 70) return baseIncrement;
+                    if (currentProgress < 90) return baseIncrement * 0.6;
+                    return baseIncrement * 0.3;
+                },
+
+                updateProgressDisplay() {
+                    const percentageElement = document.querySelector('.loading-percentage');
+                    if (percentageElement) {
+                        percentageElement.textContent = `${Math.round(this.progress)}%`;
+                    }
+                },
+
+                async onComplete() {
+                    const elapsedTime = Date.now() - this.startTime;
+                    const minimumLoadTime = 2000;
+
+                    if (elapsedTime < minimumLoadTime) {
+                        await new Promise(resolve => setTimeout(resolve, minimumLoadTime - elapsedTime));
+                    }
+
+                    this.progress = 100;
+                    this.updateProgressDisplay();
+                    
+                    await new Promise(resolve => setTimeout(resolve, 300));
+                    this.hideLoadingOverlay();
+                },
+
+                hideLoadingOverlay() {
+                    const overlay = document.getElementById('loading-overlay');
+                    const mainContent = document.getElementById('main-content');
+
+                    if (!overlay || !mainContent) return;
+
+                    overlay.classList.add('fade-out');
+                    setTimeout(() => overlay.style.display = 'none', 50);
+
+                    mainContent.style.display = 'block';
+                    setTimeout(() => {
+                        mainContent.classList.add('show');
+                        window.dispatchEvent(new Event('mainContentReady'));
+                    }, 50);
+                }
+            };
+
+            /* ==================== 主应用程序 ==================== */
+            
+            function initializeMainLogic() {
+                setTimeout(() => {
+                    adjustLetterSpacing();
+                }, 100); // 给一点延迟确保元素已经渲染
+
+                // 监听窗口大小变化
+                let resizeTimeout;
+                window.addEventListener('resize', () => {
+                    clearTimeout(resizeTimeout);
+                    resizeTimeout = setTimeout(() => {
+                        adjustLetterSpacing();
+                    }, 250); // 防抖处理
+                });
+                // 获取页面和导航元素
+                const body = document.body;
+                const scrollContainer = document.getElementById('scroll-container');
+                const sections = document.querySelectorAll('.page-section');
+                const topbarInitialFixed = document.getElementById('topbar-initial-fixed');
+                const githubIcon = document.getElementById('github');
+                const huggingfaceIcon = document.getElementById('huggingface');
+                const morphingLogo = document.getElementById('morphing-logo');
+                const whoami = document.getElementById('WHOAMI');
+
+                // SVG元素
+                const halfCircle = document.getElementById('half-circle');
+                const rect1 = document.getElementById('rect1');
+                const rect2 = document.getElementById('rect2');
+                const rect3 = document.getElementById('rect3');
+                const rect4 = document.getElementById('rect4');
+                const rect5 = document.getElementById('rect5');
+                const rect6 = document.getElementById('rect6');
+                const rect7 = document.getElementById('rect7');
+                const circle = document.getElementById('circle');
+
+                // 当前页面索引
+                let currentIndex = 0;
+
+                // 样式配置
+                const bodyCSS = {
+                    red: { 'background-color': 'rgba(242, 45, 64)' },
+                    white: { 'background-color': 'rgba(239, 238, 236)' }
+                };
+
+                const logoCSS = {
+                    big: { left: '52vw', width: '', height: '36vh', top: '2vh', transform: 'translateX(-50%)' },
+                    small: { left: '2.5vw', width: '', height: '6vh', top: '1vh', transform: 'translateX(-50%)' }
+                };
+
+                const whoamiCSS = {
+                    invisable: { top: '100vh', right: '22.5vw', color: 'rgba(239, 238, 236, 0)', 'font-size': '9vw', '-webkit-text-stroke': '0vw rgb(255, 255, 255)' },
+                    title: { top: '20vh', right: '22.5vw', color: 'rgba(239, 238, 236, 1)', 'font-size': '9vw', '-webkit-text-stroke': '0vw rgb(255, 255, 255)' },
+                    bakground: { top: '53vh', right: '50vw', color: 'rgba(239, 238, 236, 0.3)', 'font-size': '23vw', '-webkit-text-stroke': '0vw rgb(255, 255, 255)' },
+                    bakground_color: { top: '50vh', right: '40vw', color: 'rgba(239, 238, 236, 1)', 'font-size': '200vw', '-webkit-text-stroke': '200vw rgb(255, 255, 255)' }
+                };
+
+                // 初始化样式
+                Object.keys(bodyCSS.red).forEach(prop => body.style[prop] = bodyCSS.red[prop]);
+                Object.keys(logoCSS.big).forEach(prop => morphingLogo.style[prop] = logoCSS.big[prop]);
+                Object.keys(whoamiCSS.invisable).forEach(prop => whoami.style[prop] = whoamiCSS.invisable[prop]);
+
+                // 自定义光标
+                const customCursor = document.querySelector('.custom-cursor');
+                if (customCursor) {
+                    window.onmousemove = function(event) {
+                        customCursor.style.left = event.clientX + "px";
+                        customCursor.style.top = event.clientY + "px";
+                    };
+                }
+
+                // 导航按钮事件
+                document.querySelectorAll('.about').forEach(el => el.addEventListener('click', () => scrollToSection(1)));
+                document.querySelectorAll('.work').forEach(el => el.addEventListener('click', () => scrollToSection(6)));
+                document.querySelectorAll('.contact').forEach(el => el.addEventListener('click', () => scrollToSection(7)));
+
+                // 滚动到指定页面
+                function scrollToSection(index) {
+                    sections[index].scrollIntoView({ behavior: 'smooth' });
+                }
+
+                // SVG变形动画
+                function morphSvg(fromBigToSmall, progress) {
+                    const source = fromBigToSmall ? window.bigSvgPaths : window.smallSvgPaths;
+                    const target = fromBigToSmall ? window.smallSvgPaths : window.bigSvgPaths;
+
+                    halfCircle.setAttribute('d', window.interpolatePath(source.halfCircle, target.halfCircle, progress));
+                    rect1.setAttribute('d', window.interpolatePath(source.rect1, target.rect1, progress));
+                    rect2.setAttribute('d', window.interpolatePath(source.rect2, target.rect2, progress));
+                    rect3.setAttribute('d', window.interpolatePath(source.rect3, target.rect3, progress));
+                    rect4.setAttribute('d', window.interpolatePath(source.rect4, target.rect4, progress));
+                    rect5.setAttribute('d', window.interpolatePath(source.rect5, target.rect5, progress));
+                    rect6.setAttribute('d', window.interpolatePath(source.rect6, target.rect6, progress));
+                    rect7.setAttribute('d', window.interpolatePath(source.rect7, target.rect7, progress));
+
+                    circle.setAttribute('cx', source.circle.cx + (target.circle.cx - source.circle.cx) * progress);
+                    circle.setAttribute('cy', source.circle.cy + (target.circle.cy - source.circle.cy) * progress);
+                    circle.setAttribute('r', source.circle.r + (target.circle.r - source.circle.r) * progress);
+                }
+
+                // 更新Logo位置
+                function updateLogoPositionAndSize(progress) {
+                    const left = interpolateValue(logoCSS.big.left, logoCSS.small.left, progress);
+                    const height = interpolateValue(logoCSS.big.height, logoCSS.small.height, progress);
+                    const top = interpolateValue(logoCSS.big.top, logoCSS.small.top, progress);
+                    const translateX = -50 + (0 - (-50)) * progress;
+
+                    morphingLogo.style.left = left;
+                    morphingLogo.style.top = top;
+                    morphingLogo.style.height = height;
+                    morphingLogo.style.transform = `translateX(${translateX}%)`;
+                }
+
+                // 进度重映射
+                function remapProgress(progress, startThreshold, endThreshold) {
+                    if (progress < startThreshold) return 0;
+                    if (progress >= endThreshold) return 1;
+                    return (progress - startThreshold) / (endThreshold - startThreshold);
+                }
+
+                // 更新WHOAMI样式
+                function updateWHOAMICSS(stage, progress, startThreshold = 0.01, endThreshold = 0.7) {
+                    const remappedProgress = remapProgress(progress, startThreshold, endThreshold);
+                    let startStyle, endStyle;
+
+                    if (stage === 1) {
+                        startStyle = whoamiCSS.invisable;
+                        endStyle = whoamiCSS.title;
+                    } else if (stage === 2) {
+                        startStyle = whoamiCSS.title;
+                        endStyle = whoamiCSS.bakground;
+                    } else if (stage === 3) {
+                        startStyle = whoamiCSS.bakground;
+                        endStyle = whoamiCSS.bakground;
+                    } else if (stage === 4) {
+                        startStyle = whoamiCSS.bakground;
+                        endStyle = whoamiCSS.bakground_color;
+                    } else {
+                        startStyle = whoamiCSS.bakground_color;
+                        endStyle = whoamiCSS.bakground_color;
+                    }
+
+                    Object.keys(startStyle).forEach(prop => {
+                        whoami.style[prop] = interpolateValue(startStyle[prop], endStyle[prop], remappedProgress);
+                    });
+                }
+
+                // 页面初始化状态
+                window.sceneState = { initialized: false };
+                let page5_initialized = false;
+                let page6_initialized = false;
+                let page7_initialized = false;
+
+                // 处理滚动
+                function handleScroll() {
+                    const scrollPosition = scrollContainer.scrollTop;
+                    const windowHeight = window.innerHeight;
+
+                    // 检测当前页面
+                    sections.forEach((section, index) => {
+                        const sectionTop = section.offsetTop - 10;
+                        const sectionBottom = sectionTop + section.offsetHeight;
+
+                        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                            if (currentIndex !== index) {
+                                sections.forEach(s => s.classList.remove('active-section'));
+                                section.classList.add('active-section');
+                                githubIcon.style.opacity = index === 0 ? '0' : '1';
+                                huggingfaceIcon.style.opacity = index === 0 ? '0' : '1';
+                                currentIndex = index;
+                            }
+                        }
+                    });
+
+                    // 计算进度
+                    const currentPage = Math.floor(scrollPosition / windowHeight) + 1;
+                    const currentProgress = (scrollPosition % windowHeight) / windowHeight;
+                    const page1to2Progress = Math.min(scrollPosition / windowHeight, 1);
+
+                    // 更新导航栏显示
+                    if (currentPage >= 2 || (currentPage === 1 && currentProgress > 0.5)) {
+                        topbarInitialFixed.style.display = 'block';
+                    } else {
+                        topbarInitialFixed.style.display = 'none';
+                    }
+
+                    // 执行各种更新
+                    morphSvg(true, page1to2Progress);
+                    updateLogoPositionAndSize(page1to2Progress);
+                    updateWHOAMICSS(currentPage, currentProgress);
+
+                    // 页面场景初始化
+                    if (currentPage === 3 && currentProgress > 0.6 && !window.sceneState.initialized) {
+                        window.sceneState.initialized = true;
+                        if (window.initializeScene) window.initializeScene(1300);
+                    }
+                    if (currentPage === 4 && currentProgress > 0.6 && !page5_initialized) {
+                        page5_initialized = true;
+                        if (window.initialize_page5) window.initialize_page5();
+                    }
+                    if (currentPage === 5 && currentProgress > 0.6 && !page6_initialized) {
+                        page6_initialized = true;
+                        if (window.initialize_page6) window.initialize_page6();
+                    }
+                    if (currentPage === 6 && currentProgress > 0.6 && !page7_initialized) {
+                        page7_initialized = true;
+                        if (typeof Page7Module !== 'undefined') Page7Module.init('canvas-wrapper');
+                    }
+                }
+
+                // 监听滚动事件
+                scrollContainer.addEventListener('scroll', handleScroll);
+
+                // 初始化第一个页面
+                sections[0].classList.add('active-section');
+
+                // 鼠标悬停效果
+                const ohmyking = document.getElementById('ohmyking');
+                const ohmykingShadow = document.getElementById('ohmyking-shadow');
+                if (ohmyking && ohmykingShadow) {
+                    document.addEventListener('mousemove', function(e) {
+                        const width = window.innerWidth;
+                        const height = window.innerHeight;
+                        const mouseX = (e.clientX - width / 2) / (width / 2);
+                        const mouseY = (e.clientY - height / 2) / (height / 2);
+                        const intensity = 10;
+                        ohmyking.style.transform = `translate(calc(-50% + ${mouseX * intensity}px), calc(-50% + ${mouseY * intensity}px))`;
+                        ohmykingShadow.style.transform = `translate(calc(-50% + ${mouseX * intensity * 1.5}px), calc(-50% + ${mouseY * intensity * 1.5}px))`;
+                    });
+                }
+
+                // 彩蛋功能
+                const coloredEggButton = document.getElementById('colored-egg-button');
+                if (coloredEggButton) {
+                    let clickCount = 0;
+                    const maxClicks = 5;
+
+                    coloredEggButton.addEventListener('click', function(event) {
+                        event.preventDefault();
+                        event.stopPropagation();
+
+                        clickCount++;
+
+                        coloredEggButton.style.transform = 'scale(1.2)';
+                        setTimeout(() => coloredEggButton.style.transform = 'scale(1)', 150);
+
+                        if (clickCount >= maxClicks) {
+                            triggerEasterEgg();
+                        }
+                    });
+
+                    function triggerEasterEgg() {
+                        const eggImages = ['./src/imgs/egg_logo1.png', './src/imgs/egg_logo2.png'];
+                        const randomImage = eggImages[Math.floor(Math.random() * eggImages.length)];
+                        const svgContainer = coloredEggButton.closest('svg');
+                        
+                        const imageElement = document.createElementNS('http://www.w3.org/2000/svg', 'image');
+                        imageElement.setAttribute('href', randomImage);
+                        imageElement.setAttribute('x', coloredEggButton.getAttribute('cx') - coloredEggButton.getAttribute('r'));
+                        imageElement.setAttribute('y', coloredEggButton.getAttribute('cy') - coloredEggButton.getAttribute('r'));
+                        imageElement.setAttribute('width', coloredEggButton.getAttribute('r') * 2);
+                        imageElement.setAttribute('height', coloredEggButton.getAttribute('r') * 2);
+                        imageElement.style.opacity = '0';
+                        imageElement.style.transition = 'opacity 0.5s ease-in-out';
+
+                        svgContainer.insertBefore(imageElement, coloredEggButton);
+                        coloredEggButton.style.transition = 'opacity 0.5s ease-in-out';
+                        coloredEggButton.style.opacity = '0';
+
+                        setTimeout(() => {
+                            imageElement.style.opacity = '1';
+                            coloredEggButton.remove();
+                        }, 100);
+
+                        triggerConfettiExplosion();
+                        showCongratulationMessage();
+                    }
+
+                    function triggerConfettiExplosion() {
+                        if (typeof confetti === 'undefined') {
+                            console.warn('Confetti library not loaded');
+                            return;
+                        }
+
+                        const duration = 3000;
+                        const animationEnd = Date.now() + duration;
+                        const defaults = {
+                            startVelocity: 30,
+                            spread: 360,
+                            ticks: 60,
+                            zIndex: 10000,
+                            colors: ['#FF0000', '#FFD700', '#FF69B4', '#00FF00', '#00BFFF', '#FF4500', '#9400D3', '#32CD32']
+                        };
+
+                        function randomInRange(min, max) {
+                            return Math.random() * (max - min) + min;
+                        }
+
+                        const interval = setInterval(function() {
+                            const timeLeft = animationEnd - Date.now();
+                            if (timeLeft <= 0) {
+                                return clearInterval(interval);
+                            }
+
+                            const particleCount = 50 * (timeLeft / duration);
+                            confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } });
+                            confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } });
+                        }, 250);
+                    }
+
+                    function showCongratulationMessage() {
+                        const messageDiv = document.createElement('div');
+                        messageDiv.innerHTML = `
+                            <div style="text-align: center; line-height: 1; font-size: 1.5vh; font-family: 'Helvetica', 'Inter', 'Arial', sans-serif">
+                                <div>You Found it!!</div>
+                                <div>A little Logo </div>
+                                <div>designed by</div>
+                                <div> my beloved!</div>
+                            </div>
+                        `;
+                        messageDiv.style.cssText = `
+                            position: fixed;
+                            right: 2.5vw;
+                            bottom: 10vh;
+                            width: 6vw;
+                            background: transparent;
+                            color: black;
+                            z-index: 9999;
+                            opacity: 0;
+                            transition: opacity 0.5s ease-in-out;
+                        `;
+
+                        document.body.appendChild(messageDiv);
+                        setTimeout(() => messageDiv.style.opacity = '1', 500);
+                        setTimeout(() => {
+                            messageDiv.style.opacity = '0';
+                            setTimeout(() => messageDiv.remove(), 500);
+                        }, 4000);
+                    }
+                }
+            }
+
+            // 启动加载管理器
+            LoadingManager.init();
+
+            // 主内容准备就绪后初始化应用
+            window.addEventListener('mainContentReady', initializeMainLogic);
+        })();
+    </script>
+
+</body>
