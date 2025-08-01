@@ -75,6 +75,11 @@
   }
 }
 
+/* 平滑滚动 */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Custom styles for OhMyKing portfolio */
 .ohmyking-red {
   background-color: #eb2c3c;
@@ -160,4 +165,63 @@
 
 .preview-container::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+/* 导航栏固定时的页面顶部偏移 - 排除首页 */
+#whoami, #products, #works, #contact {
+  scroll-margin-top: 4rem;
+}
+
+/* 产品轮播样式 */
+.product-gallery__carousel {
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.product-gallery__carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.product-gallery__media {
+  scroll-snap-align: center;
+}
+
+.product-zoom-button {
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.product-info {
+  max-height: calc(100vh - 5rem);
+  overflow-y: auto;
+}
+
+/* 更好的sticky行为 */
+@supports (position: sticky) {
+  .product-info {
+    position: sticky;
+    top: 4rem;
+  }
+}
+
+/* 产品页面字体优化 */
+.product-title {
+  font-family: system-ui, -apple-system, sans-serif;
+  letter-spacing: -0.025em;
+}
+
+.product-info .prose {
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+}
+
+/* 按钮样式优化 */
+.product-info .button {
+  font-family: system-ui, -apple-system, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: none;
+  cursor: pointer;
 }
